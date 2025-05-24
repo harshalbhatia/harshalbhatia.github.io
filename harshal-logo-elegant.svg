@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" style="width:320px;height:80px">
+  <defs>
+    <style>
+      .elegant-text {
+        fill: #1a1a1a;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        font-weight: 500;
+        font-size: 28px;
+        letter-spacing: -0.01em;
+      }
+
+      .accent-elegant {
+        fill: #3b82f6;
+      }
+
+      .subtle-hover {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .subtle-hover:hover {
+        transform: translateY(-1px);
+      }
+
+      .gentle-pulse {
+        animation: gentlePulse 4s ease-in-out infinite;
+      }
+
+      .fade-in {
+        animation: fadeIn 0.8s ease-out;
+      }
+
+      .underline-draw {
+        stroke-dasharray: 100;
+        stroke-dashoffset: 100;
+        animation: drawLine 2s ease-out 0.5s forwards;
+      }
+
+      @keyframes gentlePulse {
+        0%, 100% { opacity: 0.4; }
+        50% { opacity: 0.8; }
+      }
+
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      @keyframes drawLine {
+        to { stroke-dashoffset: 0; }
+      }
+    </style>
+  </defs>
+
+  <!-- Main text with subtle animation -->
+  <text x="20" y="45" class="elegant-text fade-in subtle-hover">harshal bhatia</text>
+
+  <!-- Subtle accent dot -->
+  <circle cx="295" cy="40" r="2" class="accent-elegant gentle-pulse"/>
+
+  <!-- Elegant underline that draws in -->
+  <line x1="20" y1="55" x2="120" y2="55" stroke="#3b82f6" stroke-width="1" opacity="0.3" class="underline-draw"/>
+</svg>
